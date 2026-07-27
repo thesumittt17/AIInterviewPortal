@@ -5,9 +5,14 @@ import java.sql.DriverManager;
 
 public class DBConnection {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/ai_interview";
-    private static final String USER = "root";
-    private static final String PASSWORD = "sumit123";
+    private static final String URL =
+            System.getenv("DB_URL");
+
+    private static final String USER =
+            System.getenv("DB_USER");
+
+    private static final String PASSWORD =
+            System.getenv("DB_PASSWORD");
 
     public static Connection getConnection() {
 
@@ -24,7 +29,6 @@ public class DBConnection {
         } catch (Exception e) {
 
             System.out.println("Database Connection Error");
-
             e.printStackTrace();
         }
 
