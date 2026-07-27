@@ -1,0 +1,30 @@
+# Maven
+target/
+
+# NetBeans
+nbproject/private/
+nb-configuration.xml
+
+# Build folders
+build/
+dist/
+
+# Java
+*.class
+*.jar
+*.war
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
