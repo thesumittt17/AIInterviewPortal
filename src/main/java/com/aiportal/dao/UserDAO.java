@@ -65,19 +65,25 @@ public class UserDAO {
 
         rs=ps.executeQuery();
 
-        if(rs.next()){
 
-            user=new User();
 
-            user.setId(rs.getInt("id"));
+if(rs.next()){
 
-            user.setName(rs.getString("name"));
 
-            user.setEmail(rs.getString("email"));
 
-            user.setPassword(rs.getString("password"));
+    user=new User();
 
-        }
+    user.setId(rs.getInt("id"));
+    user.setName(rs.getString("name"));
+    user.setEmail(rs.getString("email"));
+    user.setPassword(rs.getString("password"));
+
+}
+else{
+
+    System.out.println("USER NOT FOUND");
+
+}
 
     }
     catch(Exception e){
